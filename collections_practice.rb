@@ -99,3 +99,14 @@ def add_s(words)
     word[word.length] = "s" unless position == 1
     end
 end
+
+#OR
+def add_s(words)
+    words.each_with_index.collect do |word, position| 
+        if position != 1
+            word << "s"
+        else
+            word 
+        end
+    end
+end
